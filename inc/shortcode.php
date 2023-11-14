@@ -5,9 +5,9 @@
  * This shortcode function allows users to display the current date with customizable formats and offsets.
  *
  * Shortcode Usage:
- * - [time format="Y" value="2"] : Displays the current year plus 2 years.
- * - [time format="M" value="2"] : Displays the current month plus 2 months.
- * - [time format="D" value="5"] : Displays the current day plus 5 days.
+ * - [sys format="Y" value="2"] : Displays the current year plus 2 years.
+ * - [sys format="M" value="2"] : Displays the current month plus 2 months.
+ * - [sys format="D" value="5"] : Displays the current day plus 5 days.
  *
  * @param array $atts Shortcode attributes.
  *                   - format (string): The date format ('Y', 'y', 'm', 'M', etc.).
@@ -17,7 +17,7 @@
  */
 
 // Define the shortcode function
-function current_year_shortcode($atts) {
+function simple_year_month_day_shortcode($atts) {
     // Set default attribute values
     $atts = shortcode_atts(
         array(
@@ -47,4 +47,4 @@ function current_year_shortcode($atts) {
 }
 
 // Add the shortcode to WordPress
-add_shortcode('time', 'current_year_shortcode');
+add_shortcode('sys', 'simple_year_month_day_shortcode');

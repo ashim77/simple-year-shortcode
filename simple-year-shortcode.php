@@ -18,5 +18,12 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+define( 'SIMPLE_YEAR_SHORTCODE_VERSION', '1.0.0' );
+define( 'SIMPLE_YEAR_SHORTCODE_ROOT', __FILE__ );
+define( 'SIMPLE_YEAR_SHORTCODE_URL',  plugins_url( '/', SIMPLE_YEAR_SHORTCODE_ROOT ) );
+define( 'SIMPLE_YEAR_SHORTCODE_PATH', plugin_dir_path( SIMPLE_YEAR_SHORTCODE_ROOT ) );
+define( 'SIMPLE_YEAR_SHORTCODE_BASE', plugin_basename( SIMPLE_YEAR_SHORTCODE_ROOT ) );
+
 // file require
-require_once( plugin_dir_path( __FILE__ ) . 'inc/shortcode.php' );
+require_once( SIMPLE_YEAR_SHORTCODE_PATH . 'inc/shortcode.php' );
+require_once( SIMPLE_YEAR_SHORTCODE_PATH . 'inc/admin.php' );
